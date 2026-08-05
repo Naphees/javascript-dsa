@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Js Loop</title>
+</head>
+<body>
+     <div>
+        <h1>Javascript Loop</h1>
+          <h2>For Loop</h2>
+          <p id="demo"></p>
+          <h2>While Loop</h2>
+          <p id="demo1"></p>
+          <h2>Do While Loop</h2>
+           <p id="demo2"></p>
+           <h2>Break Keyword In Loop</h2>
+           <p id="break"></p>
+
+           <h2>Continue Keyword In Loop</h2>
+           <p id="continue"></p>
+     </div>
+     <script>
+        const cars = ["audi","ford","bmw","volvo"];
+        let text = "";
+        // for loop
+        for(let i = 0; i < cars.length; i++){
+            text += cars[i] + "<br>";
+        }
+        document.getElementById('demo').innerHTML = text ;
+        // while loop
+         text = "";
+         let  i = 0;
+         while(i < cars.length){
+            text += cars[i] + "<br>";
+            i++;
+         }
+         document.getElementById('demo1').innerHTML = text ;
+
+         // do while loop
+         text = "";
+         i = 0;
+         do{
+            text += "do while loop : " + i;
+            i++;
+         }while(i < 5);
+         document.getElementById('demo2').innerHTML = text ;
+
+        // break keyword
+         i = 0;
+         text = "";
+         while(i <= 5){
+            if(i === 3){
+                break;
+            }
+                text += "break execution "  + i +"<br>"; 
+                i++;
+         }
+         document.getElementById('break').innerHTML = text ;
+
+         // continue keyword
+         i = 0;
+         text = "";
+        do{
+            if(i == 3){
+                i++;
+                continue;
+            }
+            text += "contiue execution : "  + i + "<br>";
+            i++;
+        }while(i <= 5);
+        document.getElementById('continue').innerHTML = text;
+
+     </script>
+    
+</body>
+</html>

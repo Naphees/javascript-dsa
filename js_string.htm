@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript String</title>
+</head>
+<body>
+      <div>
+
+           <h1>Javascript String</h1>
+           <div>
+               <p id="demo"></p>
+               <p id="demo1"></p>
+               <p id="demo2"></p>
+               <p id="demo3"></p>
+               <p id="demo4"></p>
+               <h2>HTML TEMPLATE</h2>
+                <p id="demo5"></p>
+           </div>
+
+
+      </div>
+      <script>
+          // string 
+           let text ="";
+           document.getElementById('demo').innerHTML = text;
+
+           // use double quotes
+           text = "use \"double qoutes \" ";
+           document.getElementById('demo1').innerHTML = text;
+
+           // use single quotes
+           text = 'use \' single quotes \' ';
+           document.getElementById('demo2').innerHTML = text;
+
+           // template string ``
+           text = `use template string "template string"  'new feature' `;
+           document.getElementById('demo3').innerHTML = text + " string  length : " + text.length + "typeof used for find data type :" + typeof text;
+
+           // template string support multi line string
+            // interpolation we can add variable  in string by ${}
+            let  name = "Hello Developer";
+           text = `
+                        template string support multi lines,
+                        we can create  multi line in template string
+                        this is use full  \n
+                         welcome ,${name} 
+                `;
+                document.getElementById('demo4').innerHTML = text;
+
+                // htmp template
+                let header = `Template String`;
+                let tags = [`Template string`, `String`,`Es6`];
+                let html =  `<h3> ${header} </h3><ul> `;
+                    for (const x of tags){
+                        html += `<li> ${x} </li>`;
+                    }
+                html += `</ul>`;
+                document.getElementById('demo5').innerHTML = html;
+
+      </script>
+</body>
+</html>
